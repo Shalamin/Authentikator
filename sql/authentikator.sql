@@ -1,5 +1,6 @@
-if EXISTS drop SCHEMA authen;
-create SCHEMA 'authen';
+drop SCHEMA if EXISTS authentikator;
+create SCHEMA authentikator;
+set SCHEMA 'authentikator';
 
 CREATE TABLE information(
     email VARCHAR(50) PRIMARY KEY,

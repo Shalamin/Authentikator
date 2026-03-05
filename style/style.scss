@@ -128,7 +128,7 @@ input:user-invalid + span, input.invalid + span {
   cursor: pointer;
   padding: 0.5em;
   margin-top: 2.5em;
-  margin-bottom: 2.5em;
+  margin-bottom: 1.5em;
 }
 .bouton:hover {
   background-color: rgb(6.75, 72, 146.25);
@@ -263,6 +263,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  
 }
 
 
@@ -272,6 +273,7 @@ main {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  align-items: center;
   width: 80%;
   margin-top: 1em;
   align-self: center;
@@ -284,7 +286,6 @@ main {
     text-justify: inter-word;
   }
 }
-
 
 @media screen and (max-width : 428px) {
   form {
@@ -310,6 +311,13 @@ form input {
   height: 3em;
   margin: 10px 0;
   padding: 10px;
+}
+form .bouton{
+  display: block;
+  margin: 2.5em auto;
+  align-self: center;
+  height: 2.5em;
+  text-align: center;
 }
 form input::file-selector-button {
   font-family: "Mulish";
@@ -351,15 +359,7 @@ form input:user-invalid + span, form input.invalid + span {
     font-size: 0.9em;
   }
 }
-form .bouton {
-  height: 5em;
-  font-size: 24px;
-}
-@media screen and (max-width : 428px) {
-  form .bouton {
-    height: 4em;
-  }
-}
+
 form .btnSec {
   background-color: #6CA6E9;
 }
@@ -393,6 +393,7 @@ form .btnSec {
   padding: 0.25em;
   width: 8em;
   margin-bottom: 2.5em;
+  margin-top:0.5em;
 }
 .btnJaune:hover {
   background-color: rgb(149.9602649007, 79.0331125828, 3.0397350993);
@@ -403,4 +404,32 @@ form .btnSec {
 
 .logo{
   margin-bottom: 2.5em;
+}
+.chiffre{
+  width: 30px;
+  height: 50px;
+  font-size: 30px;
+}
+.code{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+@media screen and (max-width : 428px) {
+  .code{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25em;
+}
+.chiffre{
+  width: 15px;
+  height: 25px;
+  font-size: 30px;
+}
+}
+.QR{
+  width: 300px;
+  height: 300px;
 }

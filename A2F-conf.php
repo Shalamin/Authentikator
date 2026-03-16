@@ -4,8 +4,8 @@
                 utilisateurs d'Alizon, informant les utilisateurs que leur compte est désormais protégé par 
                 l'A2F et fournissant des instructions sur la manière de gérer cette fonctionnalité de sécurité.
     Auteur : SkibidiCorp - Luhan
-    Date de création : 2026-03-09
-    Libraries utilisées : OTPHP (pour la génération de TOTP)
+    Date de création : 09/03/2026
+    Libraries utilisées : X
 -->
 
 <?php
@@ -40,7 +40,7 @@ session_start();
                 nouveau votre compte Alizon.</p>
         </section>
         <a class="bouton" href="">Mon Compte</a>
-        <a class="btnJaune" href="">Accueil</a>
+        <a class="btnJaune" href="index.php">Accueil</a>
     </main>
     <?php include 'includes/footer.php'; ?>
 </body>

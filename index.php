@@ -11,7 +11,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A2F-Menu Principal</title>
+    <title>A2F-Index</title>
 </head>
 <body>
     <h1>Bonjour !</h1>
@@ -23,9 +23,29 @@
         <button type="submit">Valider</button>
     </form>
     <script>
+        // Récupérer les éléments du formulaire
         let inputEmail = document.getElementById("email");
-        let email = inputEmail.value;
-        document.cookie = 'email=' + email;
+        let submit= document.querySelector("button[type='submit']");
+
+        // Fonction pour créer un cookie et rediriger vers la page de présentation de l'A2F
+        function setCookie(name, value) {
+            //Annuler comportement de base HTTP
+            event.preventDefault();
+            //Créer cookie
+            document.cookie = `${name}=${encodeURIComponent(value)};`
+            document.location.href = "A2F-pres.php"; 
+        }
+        //Écouteur bouton de validation
+        submit.addEventListener("click", function(event) {
+            //Récupère la valeur du formulaire
+            let email = inputEmail.value;
+            //Vérifie que l'email n'est pas vide
+            if (email) {
+                setCookie('email', email);
+            } else {
+                alert("Veuillez entrer un email valide.");
+            }
+        });
     </script>
 </body>
 </html>

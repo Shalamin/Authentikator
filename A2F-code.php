@@ -36,7 +36,8 @@ $password = getenv('PGPASSWORD');
 
 //Génération du secret et du QR code pour l'utilisateur
 $totp = TOTP::generate($clock, 16);
-$totp = $totp->withLabel($email);
+$totp = $totp->withLabel($email)
+        ->withIssuer('Alizon Marketplace');
 $goqr_me = $totp->getQrCodeUri(
     'https://api.qrserver.com/v1/create-qr-code/?color=000000&bgcolor=FFFFFF&data=[DATA]&qzone=2&margin=0&size=300x300&ecc=M',
     '[DATA]'
@@ -108,7 +109,20 @@ try {
     <?php include 'includes/footer.php'; ?>
     <script src="script/inputs.js"></script>
     <script>
-        const email = <?php echo json_encode($email); ?>;
+
+        function getCookie(nomCookie) {
+            // Récupère tous les cookies et les sépare en un tableau
+            const cookies = document.cookie.split('; ');
+            // Trouve le cookie qui commence par le nom spécifié et retourne sa valeur
+            const value = cookies.find(c => c.startsWith(nomCookie + "="))?.split('=')[1];
+            if (value === undefined) {
+                return null
+            } 
+            console.log(value);
+            return decodeURIComponent(value);
+        }
+
+        const email = getCookie('email');
         const secret = <?php echo json_encode($secret); ?>;
         const success = document.getElementById('success');
         const err = document.getElementById('err');

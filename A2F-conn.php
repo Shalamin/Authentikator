@@ -81,7 +81,7 @@
                 reqHTTP.onload = function() {
                     if (this.status == 200) {
                         if(this.responseText === "Code correct"){
-                            window.location.href = "A2F-conf.php";
+                            window.location.href = "A2F-fin.php";
                         }
                     }
                 };

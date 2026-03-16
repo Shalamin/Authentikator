@@ -38,9 +38,10 @@ try {
 //Récupération de la clé secrète associée à l'email
 $req = $bdd->prepare('SELECT secret FROM information WHERE email = :email');
 $req->execute(['email' => $_GET['email']]);
+$res = $req->fetchAll(PDO::FETCH_ASSOC);
 
 //Création de l'OTP à partir de la clé
-$otp = TOTP::createFromSecret($req);
+$otp = TOTP::createFromSecret($res[0]['secret']);
 
 //Vérification de l'OTP envoyé
 if ($otp->verify($_GET['otp']) == true) {

@@ -1,6 +1,8 @@
 <!-- 
     Fichier : A2F-fin.php
-    Description : Page indiquant que l'utilisateur est connecté après avoir activé l'authentification à deux facteurs (A2F) dans le cadre de la démonstration d'Authentikator, avec des instructions pour garder la clé secrète et tester la désactivation de l'A2F.
+    Description : Page indiquant que l'utilisateur est connecté après avoir activé l'authentification à 
+                deux facteurs (A2F) dans le cadre de la démonstration d'Authentikator, 
+                avec des instructions pour garder la clé secrète et tester la désactivation de l'A2F.
     Auteur : SkibidiCorp - Luhan
     Date de création : 22/03/2026
     Libraries utilisées : X

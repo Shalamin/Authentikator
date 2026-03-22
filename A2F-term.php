@@ -1,6 +1,8 @@
 <!-- 
     Fichier : A2F-term.php
-    Description : Page indiquant la fin de l'utilisation d'Authentikator après avoir testé la désactivation de l'authentificateur, avec des instructions pour consulter l'A2F sur le site d'Alizon et réessayer l'implémentation en retournant à l'accueil.
+    Description : Page indiquant la fin de l'utilisation d'Authentikator après avoir testé la désactivation de l'authentificateur,
+                avec des instructions pour consulter l'A2F sur le site d'Alizon et réessayer l'implémentation en 
+                retournant à l'accueil.
     Auteur : SkibidiCorp - Luhan
     Date de création : 22/03/2026
     Libraries utilisées : X
